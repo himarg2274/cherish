@@ -6,11 +6,21 @@
     <title>Cherish</title>
     <link rel="icon" href="images/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="scrapbook">
+    <!-- Landing Page with Number Input -->
+    <div class="landing-page" id="landingPage">
+        <img src="images/logo.webp" alt="App Logo" class="app-logo">
+        <h1>Welcome to Cherish</h1>
+        <p>Please enter the 4-digit code to access the scrapbook</p>
+        <input type="text" id="codeInput" maxlength="4" placeholder="Enter 4-digit code">
+        <button onclick="checkCode()">Submit</button>
+        <p id="error-message" style="color: red; display: none;">Incorrect code. Please try again.</p>
+    </div>
+
+    <!-- Scrapbook Pages -->
+    <div class="scrapbook" id="scrapbook" style="display: none;">
         <div class="page active" id="page1">
             <h1 class="page-title">Happy Birthday, My Love!</h1>
             <p class="page-message">Welcome to our special memory book. Let’s take a trip down memory lane. 💖</p>
@@ -51,17 +61,89 @@
             <img src="images/img7.jpg" alt="Memory Photo 1" class="memory-photo">
         </div>
 
-        <!-- Navigation Buttons -->
+        <div class="page" id="page7">
+            <h1 class="page-title">Our School Days</h1>
+            <p class="page-message">Remember this day we took this photo. Mukkadan was also with us.</p>
+            <img src="images/img8.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page8">
+            <h1 class="page-title">Our School Days</h1>
+            <p class="page-message">I like this photo, it's cute</p>
+            <img src="images/img9.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page9">
+            <h1 class="page-title">March 14 2022</h1>
+            <p class="page-message">I believe you remember this day.</p>
+            <img src="images/img10.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        
+
+        <div class="page" id="page10">
+            <h1 class="page-title">Crash course days</h1>
+            <p class="page-message">Remember this day you came to see me after my crash course class. You came with irfan and this photo was taken in Bhagya's iphone.</p>
+            <img src="images/img11.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page11">
+            <h1 class="page-title">Crash course days</h1>
+            <p class="page-message">Remember this day you came to see me on the last day of my crash course. This was the day when that bull chased us(me,bhagya and ciya). While we were walking you kissed me on my cheek without asking me. That was cute.</p>
+            <img src="images/img12.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page12">
+            <h1 class="page-title">Merit day </h1>
+            <p class="page-message">You came with Rohan to see me on merit day. That day your mother was also there for Nimmi's admission or something, you were scared cause you told her that you were at brilliant.</p>
+            <img src="images/img13.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page13">
+            <h1 class="page-title">First Movie Together</h1>
+            <p class="page-message">Remember this day we went to movie with Alex and Alaika.I believe you remember the rest.</p>
+            <img src="images/img14.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page14">
+            <h1 class="page-title">Kozhikode day</h1>
+            <p class="page-message">Remember this day you came to see me at kozhikode. We were there for Ragam fest at NIT.</p>
+            <img src="images/img15.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page15">
+            <h1 class="page-title">Nakshatra'22</h1>
+            <p class="page-message">You came with Deni on nakshatra to see me and blah blah blah.</p>
+            <img src="images/img16.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="page16">
+            <h1 class="page-title">Meet up</h1>
+            <p class="page-message">Remember this day we went to kj in your car. Mathews and Shreyas were there. Later in Rohan's car with rohan and mukk we went to eat and drink. Bhagya,Ciya and irfan were also there.</p>
+            <img src="images/img17.jpg" alt="Memory Photo 1" class="memory-photo">
+        </div>
+
+        <div class="page" id="lastPage" style="display: none;">
+            <h1 class="page-title">Happy 20th Bday Novuuuu</h1>
+            <p class="page-message">Have a beautiful year ahead💕</p>
+            <img src="images/last.jpg" alt="Thank You" class="memory-photo">
+        </div>
+
         <button id="prevPage" class="nav-btn">Previous</button>
         <button id="nextPage" class="nav-btn">Next</button>
 
-        <!-- Floating hearts -->
-        <div class="heart heart1"></div>
-        <div class="heart heart2"></div>
-        <div class="heart heart3"></div>
+        <div class="hearts-container">
+            <div class="heart" style="top: 10%; left: 20%; animation-duration: 6s;"></div>
+            <div class="heart" style="top: 30%; left: 50%; animation-duration: 8s;"></div>
+            <div class="heart" style="top: 50%; left: 30%; animation-duration: 10s;"></div>
+            <div class="heart" style="top: 70%; left: 70%; animation-duration: 12s;"></div>
+            <!-- Add more hearts if needed -->
+        </div>
+        
+        
+        
     </div>
-
+    
     <script src="script.js"></script>
-
 </body>
 </html>
